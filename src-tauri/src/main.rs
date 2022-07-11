@@ -5,6 +5,7 @@
 
 mod app_state;
 mod storage;
+mod worker;
 
 fn main() {
     tauri::Builder::default()

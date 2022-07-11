@@ -1,19 +1,21 @@
 {
   "name": "mark-pad",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "start": "vite && tarui dev",
-    "build": "tsc && vite build",
+    "build:web": "tsc && vite build",
     "preview": "vite preview",
     "tauri": "tauri",
-    "tauri:build": "tauri build"
+    "tauri:build": "tauri build",
+    "build:release": "npm run build:web && npm run tauri:build --release"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.0.0-rc.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.0.0-rc.7",
